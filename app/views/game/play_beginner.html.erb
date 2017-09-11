@@ -1,5 +1,53 @@
+<!DOCTYPE html>
 <html>
-<head>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+        <title>SlickQuiz Demo</title>
+
+        <link href="css/reset.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/master.css" media="screen" rel="stylesheet" type="text/css">
+  <style type="text/css">
+
+.startQuiz,
+.nextQuestion,
+.backToQuestion,
+.questions li.question,
+.questions li.question .responses,
+.questions li.question .responses .correct,
+.questions li.question .responses .incorrect,
+.quizResults {
+    display: none;
+}
+
+/* If response messages are disabled or only shown on quiz completion,
+   nextQuestion button IS checkAnswer button - so it must be displayed */
+.nextQuestion.checkAnswer {
+    display: block;
+}
+
+ol.questions,
+ul.answers,
+ul.responses,
+ol.questions li,
+ul.answers li,
+ul.responses li {
+    list-style-type: none;
+}
+
+/* Accessibility */
+.quizName span:first-child {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
 <style type="text/css">
 h1.custom {
     color: #9933FF;
@@ -100,8 +148,41 @@ h1.custom {
 </head>
 </html>
 <h1 class="custom text-center">Beginner Code</h1>
-<h2 class="custom text-center">Mission :Turn the Lights On
+<h2 class="custom text-center">Mission: Turn the Lights On
 </h2>
-<h2 class= "custom text-center">We want to code the lights in the bracelet.</h2>
-  <%= render "game/beginner/question_#{@question_number}" %>
+
+  <body id="slickQuiz">
+        <h1 class="quizName"><!-- where the quiz name goes --></h1>
+
+        <div class="quizArea">
+
+            <div class="quizHeader">
+                <!-- where the quiz main copy goes -->
+
+                <a class="button startQuiz" href="#"><img src='/images/colorblock.png'><h2><strong>Get Started!</strong></h2></a>
+
+            </div>
+
+            <!-- where the quiz gets built -->
+        </div>
+
+        <div class="quizResults">
+            <h3 class="quizScore">You Scored: <span><!-- where the quiz score goes --></span></h3>
+
+            <h3 class="quizLevel"><strong>Ranking:</strong> <span><!-- where the quiz ranking level goes --></span></h3>
+             <a href="/game/play_beginner_one"><img src='/images/begbuttonquiz.png'></a>
+
+            <div class="quizResultsCopy">
+                <!-- where the quiz result copy goes -->
+            </div>
+        </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/slickQuiz-beg.js"></script>
+        <script src="js/slickQuiz.js"></script>
+        <script src="js/master.js"></script>
+
+    </body>
+</html>
+
 

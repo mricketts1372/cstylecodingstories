@@ -26,13 +26,20 @@ root 'home#index'
 
 get('/learn/basics', { :controller => 'learn', :action => 'basics' })
    get('/learn/beginner_code', { :controller => 'learn', :action =>  'beginner_code' })
+    get('/learn/beginner_code_one', { :controller => 'learn', :action =>  'beginner_code_one' })
+     get('/learn/beginner_code_two', { :controller => 'learn', :action =>  'beginner_code_two' })
     get('/game/play_beginner/:question_number', { :controller => 'game', :action => 'play_beginner' })
      get('/learn/intermediate_code', { :controller => 'learn', :action => 'intermediate_code' })
      get('/learn/advance_code', { :controller => 'learn', :action => 'advance_code' })
  get('/score/scoreboard', { :controller => 'score', :action => 'scoreboard' })
+  get('/about/aboutcstyle', { :controller => 'about', :action => 'aboutcstyle' })
+  get('/read/stories', { :controller => 'read', :action => 'stories' })
 get('/game/play_beginner', { :controller => 'game', :action => 'play_beginner' })
+get('/game/play_beginner_one', { :controller => 'game', :action => 'play_beginner_one' })
 get('/game/play_rules', { :controller => 'game', :action => 'play_rules' })
+get('/game/play_intermediate_one', { :controller => 'game', :action => 'play_intermediate_one' })
 get('/game/play_intermediate', { :controller => 'game', :action => 'play_intermediate' })
+
   get('/game/play_advance', { :controller => 'game', :action => 'play_advance' })
 end
 
