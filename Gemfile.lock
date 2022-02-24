@@ -1,6 +1,6 @@
 GIT
   remote: http://github.com/rbetina/starter_generators.git
-  revision: 112f58913666570fc7820984387d7266b7a60102
+  
   branch: simple
   specs:
     starter_generators (0.9.6)
