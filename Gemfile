@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'devise'
 gem 'starter_generators', :git => "http://github.com/rbetina/starter_generators.git", :branch => "simple"
-
+gem 'json', github: 'flori/json', branch: 'v1.8'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
