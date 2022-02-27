@@ -6,13 +6,9 @@ gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
 
 gem 'sqlite3'
 
-=======
-gem 'sqlite3'
->>>>>>> parent of fa4ea70 (pg)
 =======
 gem 'sqlite3'
 >>>>>>> parent of fa4ea70 (pg)
